@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bharat Sharma — Content Specialist focused on content management, product catalogues and SEO." />
+  <title>Bharat Sharma — Content Specialist</title>
+  <style>
+    :root{
+      --bg:#f7f8fa;
+      --surface:#ffffff;
+      --text:#202124;
+      --muted:#5f6368;
+      --line:#dadce0;
+      --accent:#1a73e8;
+      --accent-soft:#e8f0fe;
+      --shadow:0 10px 30px rgba(60,64,67,.10);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(247,248,250,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(218,220,224,.7);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;letter-spacing:-.02em}
+    .brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px}
+    .nav-links a:hover{color:var(--accent)}
+    .hero{padding:110px 0 90px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      background:var(--accent-soft);color:#174ea6;
+      font-size:13px;font-weight:700;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:#34a853}
+    h1{
+      max-width:850px;
+      margin:24px 0 20px;
+      font-size:clamp(48px,8vw,88px);
+      line-height:.98;letter-spacing:-.065em;
+    }
+    .hero p{max-width:690px;font-size:21px;color:var(--muted);margin:0 0 34px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 19px;border-radius:999px;font-weight:700;font-size:14px;
+      border:1px solid var(--line);background:var(--surface);
+      transition:.2s transform,.2s box-shadow,.2s background;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .btn.primary{background:var(--text);color:white;border-color:var(--text)}
+    section{padding:78px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+    .kicker{color:var(--accent);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+    h2{font-size:38px;line-height:1.1;letter-spacing:-.04em;margin:8px 0 0}
+    .section-head p{max-width:430px;color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{
+      background:var(--surface);border:1px solid var(--line);
+      border-radius:var(--radius);padding:30px;
+      box-shadow:0 2px 8px rgba(60,64,67,.04);
+    }
+    .card:hover{box-shadow:var(--shadow)}
+    .role{display:flex;justify-content:space-between;gap:20px}
+    .role h3{font-size:23px;margin:0 0 5px;letter-spacing:-.025em}
+    .company{font-weight:700;color:var(--accent)}
+    .date{color:var(--muted);font-size:13px;white-space:nowrap}
+    .card p{color:var(--muted);margin:18px 0 0}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600}
+    .about{
+      display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start;
+    }
+    .about-copy{font-size:20px;color:var(--muted)}
+    .highlight{
+      padding:30px;border-radius:var(--radius);background:#202124;color:white;
+    }
+    .highlight strong{display:block;font-size:25px;line-height:1.2;margin-bottom:10px}
+    .contact{
+      background:var(--surface);border:1px solid var(--line);
+      border-radius:32px;padding:45px;
+      display:flex;justify-content:space-between;gap:30px;align-items:center;
+    }
+    .contact h2{max-width:520px}
+    footer{padding:35px 0 50px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){
+      .wrap{width:min(100% - 28px,1120px)}
+      .nav-links{gap:14px}
+      .nav-links a:nth-child(1){display:none}
+      .hero{padding:75px 0 55px}
+      h1{font-size:52px}
+      .hero p{font-size:18px}
+      section{padding:55px 0}
+      .grid,.about{grid-template-columns:1fr}
+      .section-head,.contact,footer{display:block}
+      .section-head p{margin-top:15px}
+      .contact .actions{margin-top:25px}
+      .role{display:block}
+      .date{display:block;margin-top:8px}
+      footer > *{margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">Bharat<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero wrap">
+      <div class="eyebrow"><span class="dot"></span> Content Specialist · Greater Delhi Area</div>
+      <h1>I turn product information into clear, useful digital experiences.</h1>
+      <p>
+        Content Specialist with experience in product catalogue management,
+        SEO-driven content, customer experience and process-focused digital work.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#experience">View experience</a>
+        <a class="btn" href="mailto:bharatsharma.office@gmail.com">Get in touch</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap about">
+        <div>
+          <div class="kicker">About</div>
+          <h2>Content meets product thinking.</h2>
+        </div>
+        <div>
+          <p class="about-copy">
+            My experience spans content creation, product catalogue management,
+            SEO, customer interactions and process optimization. I enjoy making
+            information easier to understand while keeping it accurate,
+            structured and useful for the people who rely on it.
+          </p>
+          <div class="highlight">
+            <strong>Strong on content. Curious about products. Focused on outcomes.</strong>
+            My work combines structured information, online visibility and
+            customer-focused thinking.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Experience</div>
+            <h2>Where I've worked</h2>
+          </div>
+          <p>A compact view of the roles and responsibilities highlighted in my profile.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="role">
+              <div>
+                <h3>Content Specialist</h3>
+                <div class="company">91Trucks</div>
+              </div>
+              <div class="date">Feb 2025 – Present</div>
+            </div>
+            <p>
+              Content creation and product catalogue management for the
+              commercial vehicle segment, with a focus on SEO-driven strategies
+              to improve online visibility and lead generation.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="role">
+              <div>
+                <h3>Customer Service Representative</h3>
+                <div class="company">Concentrix</div>
+              </div>
+              <div class="date">Sep 2024 – Feb 2025</div>
+            </div>
+            <p>
+              Handled customer interactions through calls, chat and email,
+              resolved queries, supported customer satisfaction, and worked
+              with CRM tools and performance metrics including CSAT, AHT and FCR.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Capabilities</div>
+            <h2>What I bring</h2>
+          </div>
+          <p>Core skills listed in my profile, presented as a simple visual system.</p>
+        </div>
+        <div class="skills">
+          <span class="skill">Content Management</span>
+          <span class="skill">Team Management</span>
+          <span class="skill">Search Engine Optimization (SEO)</span>
+          <span class="skill">Product Catalogue Management</span>
+          <span class="skill">Customer Experience</span>
+          <span class="skill">CRM Tools</span>
+          <span class="skill">Process Optimization</span>
+          <span class="skill">Cross-functional Collaboration</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div>
+            <div class="kicker">Contact</div>
+            <h2>Have an opportunity or just want to connect?</h2>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:bharatsharma.office@gmail.com">Email me</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/bharat-sharma-371541173/">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© <span id="year"></span> Bharat Sharma</span>
+    <span>Built as a lightweight, single-file personal site.</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
